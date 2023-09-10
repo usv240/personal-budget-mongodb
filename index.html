@@ -3,28 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Personal Budget</title>
 
     <!-- This is a Semantic HTML Change: Changed the link relationship to indicate it's a stylesheet -->
     <link rel="stylesheet" href="http://192.241.141.105/pb/reset.css">
-    <link rel="stylesheet" href="http://192.241.141.105/pb/main.css">
+    <link rel="stylesheet" href="/main.css">
 
+    <!-- This is an SEO Change -->
+    <!---- The below tags are SEO tags to improve SEO by using meta tag-->
+    <meta name="description" content="Simplify budget management with our free app. Track expenses, stay on budget, and achieve financial success effortlessly.">
+    <meta name="keywords" content="spending, financial strategy, financial control, personal finance, budget tracking, ">
+    <meta name="author" content="Ujwal Suresh Vanjare">    
 </head>
 <body>
 
-    <div class="menu">
+    <!-- This is a Semantic HTML Change -->
+    <!-- Replaced <div> with <nav> for navigation links and added the 'role' attribute for improved accessibility.-->    
+    <nav class="menu" role="navigation">
         <ul>
-            <li><a href="/">Homepage</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
+            <!-- This is an A11y Change -->
+            <li><a href="/" aria-label="Go to Homepage">Homepage</a></li>
+            <li><a href="http://192.241.141.105/pb/about.html" aria-label="Learn About Our App">About</a></li>
+            <li><a href="http://192.241.141.105/pb/login.html" aria-label="Log into Your Account">Login</a></li>
+            <li><a href="https://google.com" aria-label="Visit Google">Google</a></li>
         </ul>
-    </div>
+    </nav>
+    
 
-    <div class="hero">
+    <!-- This is a Semantic HTML Change -->
+    <header class="hero">
         <h1>Personal Budget</h1>
         <h2>A personal-budget management app</h2>
-    </div>
+    </header>
 
     <div class="container center">
 
@@ -98,11 +109,13 @@
 
     </div>
 
-    <div class="bottom">
-        <div class="center">
-            All rights reserved &copy; Fabio Nolasco
-        </div>
-    </div>
+    <!-- This is a Semantic HTML Change -->
+    <!-- Used footer tag instead of div -->
+    <footer class="bottom">
+        <p class="center">
+            All rights reserved &copy; Ujwal Suresh vanjare
+        </p>
+    </footer>
 
 </body>
 </html>
