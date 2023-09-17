@@ -119,23 +119,26 @@
     </div>
 
    
-    <script script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script>
         var dataSource = {
             datasets: [
                 {
-                    data: [30, 350, 90],
+                    data: [],
                     backgroundColor: [
                         '#ffcd56',
                         '#ff6384',
                         '#36a2eb',
                         '#fd6b19',
+                        '#fd6b90',
+                        '#36aeb8',
+                        '#36ae78',
+                        '#36ae18',
                     ],
                 }
             ],
-            labels: [
-            ]
+            labels: []
         };
 
         function createChart(){
@@ -147,13 +150,13 @@
         }
         
         function getBudget() {
-    axios.get('/budget')
-    .then(function (res) {
-        console.log(res); 
-        for (var i = 0; i < res.data.myBudget.length; i++) {
-            dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
-            dataSource.labels[i] = res.data.myBudget[i].title;
-        }
+                axios.get('/budget')
+                .then(function (res) {
+                    console.log(res); 
+                    for (var i = 0; i < res.data.myBudget.length; i++) {
+                        dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
+                        dataSource.labels[i] = res.data.myBudget[i].title;
+                    }
         createChart();
     });
 }
