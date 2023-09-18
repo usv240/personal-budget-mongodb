@@ -7,23 +7,6 @@ const fs = require('fs');
 app.use('/', express.static('public'));
 app.use('/bug',express.static('budget_data.json'));
 
-const budget ={ 
-    myBudget: [
-    {
-        title: 'Eat out',
-        budget: 25
-    },
-    {
-        title: 'Rent',
-        budget: 375
-    },
-    {
-        title: 'grocery',
-        budget: 110
-    },
-]
-};
-
 app.get('/hello', (req, res) => {
     res.send('Hello World!');
 });
