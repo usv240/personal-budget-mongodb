@@ -19,7 +19,7 @@ app.get('/budget', (req, res) => {
             res.status(500).json({ error: 'An error occurred while reading budget data.' });
         } else {
             const budgetData = JSON.parse(data);
-            res.json(budgetData);
+            res.render('index.html', { budgetData }); // Pass budgetData to the HTML file
         }
     });
 });
