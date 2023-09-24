@@ -20,6 +20,7 @@
   "homepage": "https://github.com/usv240/personal-budget#readme",
   "dependencies": {
     "axios": "^1.5.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2"
   }
 }
